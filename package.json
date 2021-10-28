@@ -2,9 +2,9 @@
   "name": "dynamic-readme",
   "version": "1.0.0",
   "description": "动态的readme生成,结合workflow",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "ncc build index.js --license licenses.txt"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +14,8 @@
     "@actions/github": "^5.0.0",
     "got": "^11.8.2",
     "octokit": "^1.7.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.31.1"
   }
 }
