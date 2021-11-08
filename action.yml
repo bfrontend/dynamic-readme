@@ -1,0 +1,12 @@
+name: "update readme"
+description: "automatic update user readme"
+inputs:
+  GH_TOKEN:
+    description: "github token"
+    required: true
+  WAKATIME_API_KEY:
+    description: "wakatime api"
+    required: true
+runs:
+  using: "node12"
+  main: "dist/index.js"
