@@ -11,12 +11,12 @@ const compose = function (handles) {
   }, Promise.resolve())
 }
 const getReadme = () => octokit.rest.repos.getReadme({
-  owner: 'webxmsj',
-  repo: 'webxmsj',
+  owner: github.user,
+  repo: github.user,
 }).then(res => res.data.sha)
 const updateReadme = ({sha, content}) => octokit.rest.repos.createOrUpdateFileContents({
-  owner: 'webxmsj',
-  repo: 'webxmsj',
+  owner: github.user,
+  repo: github.user,
   path: 'README.md',
   message: 'update readme by script fourth',
   content: Buffer.from(content).toString('base64'),
