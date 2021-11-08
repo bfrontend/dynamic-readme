@@ -16130,6 +16130,8 @@ const compose = function (handles) {
     return prev.then(next)
   }, Promise.resolve())
 }
+console.log('wakatimeKey', wakatimeKey)
+console.log('token', token)
 const getReadme = () => octokit.rest.repos.getReadme({
   owner: github.user,
   repo: github.user,
@@ -16157,6 +16159,8 @@ ${projects.map(item => tempStr(item)).join('\n')}
     sha,
     content
   }
+}).catch(err => {
+  console.log(err)
 })
 
 compose([updateReadme, generateContent, getReadme]).then(res => {
