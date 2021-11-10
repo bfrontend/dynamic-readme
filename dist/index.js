@@ -16169,9 +16169,9 @@ ${projects.map(item => tempStr(item)).join('\n')}
 })
 
 compose([updateReadme, generateContent, getReadme, getUsername]).then(res => {
-  console.log('更新readme成功',res)
+  console.log('更新readme成功')
 }).catch(e => {
-  console.log(e)
+  console.log('更新readme失败', e)
 })
 
 })();
