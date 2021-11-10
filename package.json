@@ -4,7 +4,7 @@
   "description": "动态的readme生成,结合workflow",
   "main": "dist/index.js",
   "scripts": {
-    "build": "ncc build index.js --license licenses.txt"
+    "build": "ncc build index.js -m --license licenses.txt"
   },
   "keywords": [],
   "author": "",
